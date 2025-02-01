@@ -62,6 +62,32 @@ The Work Order Management System (WOMS) is a web-based platform designed to stre
 - **Cost Calculation**: Estimates labor and material costs based on predefined rates and recorded inventory usage.
 - **Time Tracking**: Logs the estimated vs. actual time spent on work orders to improve scheduling accuracy.
 - **Material Usage**: Tracks inventory levels, usage per job, and triggers restocking alerts when supplies are low.
+- **Delay Management System**:
+  - **Delay Detection**:
+    - Real-time monitoring of work order progress
+    - Automated detection of schedule deviations
+    - Priority-based delay assessment
+
+  - **Rescheduling Logic**:
+    - Smart time slot identification based on:
+      - Technician availability
+      - Emergency job priority
+      - Client preferences
+      - Geographic optimization
+    - Conflict resolution with existing schedules
+    - Resource reallocation
+
+  - **Notification System**:
+    - Automated client communications
+    - Technician schedule updates
+    - Management alerts for repeated delays
+    - Status updates to all stakeholders
+
+  - **Impact Analysis**:
+    - Schedule impact assessment
+    - Resource utilization adjustment
+    - Cost implications calculation
+    - SLA compliance monitoring
 
 ### 3.3 Analytics & Reporting
 - **Performance Metrics**: Provides insights into technician efficiency and company-wide productivity.
@@ -147,8 +173,8 @@ WorkOrder {
 
   technician: {
     id: String,  // Reference to the assigned technician's ID
-    name: String,  // Technician’s name
-    skillSet: Array<String>,  // List of technician’s skills relevant to the job
+    name: String,  // Technician's name
+    skillSet: Array<String>,  // List of technician's skills relevant to the job
     availability: Boolean  // Technician's availability status
   },
 
@@ -193,7 +219,26 @@ WorkOrder {
   ],
 
   created: DateTime,  // Timestamp when the work order was created
-  updated: DateTime  // Timestamp of the last update to the work order
+  updated: DateTime,  // Timestamp of the last update to the work order
+
+  delays: [{
+    reason: String,  // Reason for the delay
+    duration: Number,  // Duration of delay in hours
+    reportedBy: String,  // ID of user who reported the delay
+    timestamp: DateTime,  // When the delay was reported
+    rescheduledTo: DateTime  // New scheduled time
+  }],
+
+  reschedulingHistory: [{
+    originalTime: DateTime,
+    newTime: DateTime,
+    reason: String,
+    affectedParties: [{
+      userId: String,
+      notified: Boolean,
+      notificationTime: DateTime
+    }]
+  }]
 }
 ```
 
