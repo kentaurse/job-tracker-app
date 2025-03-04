@@ -1,46 +1,46 @@
-# Work Order Management System - Comprehensive Requirements & Design Document
+# Work Order Management System - Desktop Application
 
 ## 1. Project Overview
 
 ### 1.1 System Description
-The Work Order Management System (WOMS) is a web-based platform designed to streamline work order creation, assignment, and tracking for plumbing and electrical service companies. The system provides real-time updates, advanced analytics, and scheduling tools to optimize technician performance and improve customer satisfaction. The platform ensures seamless job management from the moment a work order is created to its successful completion, enhancing operational efficiency and reducing delays.
+The Work Order Management System (WOMS) is a desktop application designed to streamline work order creation, assignment, and tracking for plumbing and electrical service companies. The system provides comprehensive job management, advanced analytics, and scheduling tools to optimize technician performance and improve customer satisfaction. The application ensures seamless job management from the moment a work order is created to its successful completion, enhancing operational efficiency and reducing delays.
 
 ### 1.2 Core Features
 - **Work Order Creation & Management**: Enables administrators to create, assign, and track work orders efficiently with detailed job descriptions and resource requirements.
 - **Technician Scheduling & Dispatch**: Optimized technician assignments based on skill set, availability, and location, ensuring fast response times and efficient service execution.
 - **Real-time Status Tracking**: Live updates on work order progress through notifications and dashboards, providing a clear overview of job status.
 - **Analytics & Reporting**: Insights into company performance, technician efficiency, cost breakdowns, and customer satisfaction metrics.
-- **Mobile-Responsive Interface**: Ensures usability across desktops, tablets, and mobile devices, allowing technicians to update job status in the field.
-- **Multi-language Support**: Enables accessibility for a diverse workforce, supporting different languages for ease of use.
+- **Inventory Integration**: Direct connection to tool stores and inventory management to ensure technicians have the necessary equipment.
+- **Automatic Rescheduling**: Smart rescheduling system that automatically adjusts schedules when delays occur, particularly for electrical work.
 - **User Role Management**: Provides different access levels for administrators, managers, dispatchers, technicians, and clients to ensure secure data handling and role-specific functionalities.
+- **Centralized Server Architecture**: Supports up to 100 concurrent users with a centralized server model for data consistency.
 
 ---
 
 ## 2. Technical Architecture
 
-### 2.1 Frontend Stack
+### 2.1 Application Stack
+- **Electron**: Cross-platform desktop application framework that combines frontend and backend into a single executable.
 - **React + Vite**: High-performance front-end framework for a responsive UI and smooth user experience.
 - **Ant Design (antd)**: Pre-styled UI components for professional design consistency and an intuitive interface.
 - **Redux Toolkit**: State management for seamless data handling across components, improving application performance.
-- **Recharts**: Interactive data visualization for real-time analytics and reporting, helping businesses make data-driven decisions.
-- **TailwindCSS**: Utility-first styling for a modern, responsive layout, ensuring a seamless experience across different devices.
-- **i18next**: Multi-language support for international users, making the platform accessible worldwide.
-- **Socket.io**: Real-time data synchronization for instant work order status updates and seamless communication between technicians and administrators.
+- **TailwindCSS**: Utility-first styling for a modern, responsive layout.
+- **Node.js**: Backend runtime environment integrated within the Electron application.
+- **SQLite**: Embedded database for local data storage with optional synchronization to a central server.
 
-### 2.2 Backend Stack
-- **Node.js + Express**: Lightweight and scalable backend framework for handling API requests efficiently.
-- **MongoDB + Mongoose**: NoSQL database for flexible data storage, ensuring efficient handling of work order information and historical records.
-- **JWT Authentication**: Secure user authentication and role-based access control, preventing unauthorized access to sensitive data.
-- **Cloud Storage Integration**: AWS S3 or Firebase Storage for file uploads (e.g., invoices, work completion photos), enabling seamless document management.
-- **Cron Jobs & Background Processing**: Automated notifications, periodic reports, and scheduled job assignments to enhance workflow automation.
-- **WebSockets (Socket.io)**: Real-time updates for technicians and administrators to minimize delays and ensure timely job execution.
+### 2.2 Backend Architecture
+- **Node.js + Express**: Lightweight and scalable backend framework for handling internal API requests efficiently.
+- **SQLite Database**: Embedded database for reliable local data storage.
+- **IPC Communication**: Inter-Process Communication between Electron's main and renderer processes for secure data exchange.
+- **Background Processing**: Automated notifications, periodic reports, and scheduled job assignments to enhance workflow automation.
+- **Central Server Synchronization**: Optional synchronization with a central server for multi-user environments.
 
-### 2.3 Deployment & Infrastructure
-- **Hosting**: AWS (EC2, Lambda) or DigitalOcean for reliable and scalable hosting.
-- **Database Hosting**: MongoDB Atlas for secure and optimized database management.
-- **CI/CD Pipeline**: GitHub Actions or Jenkins for automated testing and deployments, reducing deployment time and errors.
-- **Logging & Monitoring**: AWS CloudWatch, Sentry, or Prometheus for tracking system health and debugging issues.
-- **Containerization**: Docker for scalable deployments, ensuring consistent development and production environments.
+### 2.3 Deployment & Distribution
+- **Single Executable**: Packaged as a single .exe file for easy distribution and installation.
+- **Auto-Updates**: Built-in mechanism for seamless application updates.
+- **Offline Capability**: Full functionality even without internet connection.
+- **Data Synchronization**: Background synchronization when connection is available.
+- **Installer Package**: Professional installer with customization options.
 
 ---
 
@@ -97,6 +97,12 @@ The Work Order Management System (WOMS) is a web-based platform designed to stre
 - **Customer Satisfaction**: Collects ratings and reviews from clients to assess service quality.
 - **Export Capabilities**: Supports CSV and PDF report generation for business analytics and record-keeping.
 
+### 3.4 Inventory Management
+- **Tool Store Integration**: Direct connection to inventory systems of tool stores.
+- **Material Tracking**: Real-time tracking of materials used in jobs.
+- **Automatic Ordering**: Threshold-based automatic ordering of frequently used materials.
+- **Technician Equipment Assignment**: Tracking of tools assigned to each technician.
+
 ---
 
 ## 4. User Roles & Permissions
@@ -116,6 +122,7 @@ The Work Order Management System (WOMS) is a web-based platform designed to stre
 - **analytics_access**: Provides access to reports and analytics dashboards.
 - **user_management**: Allows management of user roles and access levels.
 - **settings_access**: Enables modification of system configurations and preferences.
+- **server_admin**: Special permission for central server administration.
 
 ---
 
@@ -135,6 +142,7 @@ The Work Order Management System (WOMS) is a web-based platform designed to stre
 - **Intelligent Route Optimization**: Uses AI-driven mapping to suggest the shortest and most efficient travel routes, reducing response times and operational costs.
 - **Balanced Workload Distribution**: Dynamically adjusts assignments to prevent technician overburdening, ensuring equitable job allocation.
 - **Performance Monitoring & KPI Tracking**: Measures efficiency, completion rates, and customer satisfaction to drive continuous improvement.
+- **Time Allocation Tracking**: Monitors how long technicians have to complete each job and tracks actual completion times.
 
 ### 5.3 Advanced Analytics Dashboard
 - **Comprehensive Work Order Volume Trends**: Provides insights into demand patterns, allowing for proactive workforce planning.
@@ -145,12 +153,15 @@ The Work Order Management System (WOMS) is a web-based platform designed to stre
 
 ---
 
-## 6. Mobile Responsiveness
-- **Responsive Grid Layout**
-- **Touch-friendly Interface**
-- **Offline Capability**
-- **Mobile-optimized Forms**
-- **Quick Action Buttons**
+## 6. Desktop Application Features
+- **Offline-First Architecture**: Full functionality without internet connection
+- **Automatic Data Synchronization**: Syncs with central server when connection is available
+- **Native OS Integration**: System notifications, file handling, and printing
+- **Resource Efficiency**: Optimized for minimal system resource usage
+- **Multi-Window Support**: Ability to open multiple work orders simultaneously
+- **Keyboard Shortcuts**: Productivity enhancements for power users
+- **Local Data Storage**: Secure storage of data on local machine
+- **Automatic Updates**: Seamless application updates without user intervention
 
 ---
 
@@ -254,14 +265,64 @@ WorkOrder {
 ## 8. Development Timeline & Cost
 
 ### 8.1 Development Phases
-1. **System Setup & Basic Structure**: 40 hours
-2. **Work Order Management Module**: 80 hours
-3. **Technician Management**: 60 hours
-4. **Analytics & Reporting**: 40 hours
-5. **Mobile Optimization**: 40 hours
-6. **Testing & Deployment**: 40 hours
+1. **System Setup & Basic Structure**: 120 hours
+   - Environment configuration and project scaffolding
+   - Database schema design and implementation
+   - Authentication system setup
+   - Core application architecture
+
+2. **Work Order Management Module**: 240 hours
+   - Work order creation interface
+   - Assignment and scheduling system
+   - Status tracking and notification system
+   - Priority management implementation
+   - Delay detection and rescheduling logic
+
+3. **Technician Management**: 180 hours
+   - Technician profile management
+   - Skill matrix implementation
+   - Availability tracking system
+   - Route optimization algorithms
+   - Mobile-friendly technician interface
+
+4. **Analytics & Reporting**: 160 hours
+   - Dashboard development
+   - Custom report generation
+   - Data visualization components
+   - Export functionality (PDF, CSV)
+   - Performance metrics calculation
+
+5. **Inventory Integration**: 200 hours
+   - Tool store API integration
+   - Inventory tracking system
+   - Material usage monitoring
+   - Automatic ordering system
+   - Equipment assignment tracking
+
+6. **Desktop Application Packaging**: 100 hours
+   - Electron configuration and optimization
+   - Cross-platform compatibility testing
+   - Auto-update mechanism implementation
+   - Offline functionality development
+   - Installation package creation
+
+7. **Testing & Quality Assurance**: 180 hours
+   - Unit and integration testing
+   - Performance optimization
+   - Security auditing
+   - User acceptance testing
+   - Bug fixing and refinement
+
+8. **Deployment & Training**: 120 hours
+   - Deployment planning and execution
+   - System documentation
+   - User training materials
+   - Admin training sessions
+   - Post-deployment support
 
 ### 8.2 Cost Estimation
-- **Total Development Hours**: 300
-- **Hourly Rate**: $40
-- **Total Development Cost**: $12,000
+- **Total Development Hours**: 1,300
+- **Hourly Rate**: $75
+- **Development Cost**: $97,500
+- **Contingency Buffer**: $2,500
+- **Total Project Budget**: $100,000
