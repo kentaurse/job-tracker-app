@@ -265,55 +265,55 @@ WorkOrder {
 ## 8. Development Timeline & Cost
 
 ### 8.1 Development Phases
-1. **System Setup & Basic Structure**: 120 hours
+1. **System Setup & Basic Structure**: 90 hours
    - Environment configuration and project scaffolding
    - Database schema design and implementation
    - Authentication system setup
    - Core application architecture
 
-2. **Work Order Management Module**: 240 hours
+2. **Work Order Management Module**: 180 hours
    - Work order creation interface
    - Assignment and scheduling system
    - Status tracking and notification system
    - Priority management implementation
    - Delay detection and rescheduling logic
 
-3. **Technician Management**: 180 hours
+3. **Technician Management**: 140 hours
    - Technician profile management
    - Skill matrix implementation
    - Availability tracking system
    - Route optimization algorithms
    - Mobile-friendly technician interface
 
-4. **Analytics & Reporting**: 160 hours
+4. **Analytics & Reporting**: 120 hours
    - Dashboard development
    - Custom report generation
    - Data visualization components
    - Export functionality (PDF, CSV)
    - Performance metrics calculation
 
-5. **Inventory Integration**: 200 hours
+5. **Inventory Integration**: 150 hours
    - Tool store API integration
    - Inventory tracking system
    - Material usage monitoring
    - Automatic ordering system
    - Equipment assignment tracking
 
-6. **Desktop Application Packaging**: 100 hours
+6. **Desktop Application Packaging**: 80 hours
    - Electron configuration and optimization
    - Cross-platform compatibility testing
    - Auto-update mechanism implementation
    - Offline functionality development
    - Installation package creation
 
-7. **Testing & Quality Assurance**: 180 hours
+7. **Testing & Quality Assurance**: 140 hours
    - Unit and integration testing
    - Performance optimization
    - Security auditing
    - User acceptance testing
    - Bug fixing and refinement
 
-8. **Deployment & Training**: 120 hours
+8. **Deployment & Training**: 100 hours
    - Deployment planning and execution
    - System documentation
    - User training materials
@@ -321,8 +321,7 @@ WorkOrder {
    - Post-deployment support
 
 ### 8.2 Cost Estimation
-- **Total Development Hours**: 1,300
-- **Hourly Rate**: $75
-- **Development Cost**: $97,500
-- **Contingency Buffer**: $2,500
-- **Total Project Budget**: $100,000
+- **Total Development Hours**: 1,000
+- **Hourly Rate**: 65€
+- **Development Cost**: 65,000€
+- **Total Project Budget**: 65,000€
