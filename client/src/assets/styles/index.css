@@ -1,3 +1,79 @@
-@import "tailwindcss" important;
+/* @layer tailwind-base, antd;
+@layer tailwind-base {
+  @tailwind base;
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@custom-variant dark (&:where(.dark, .dark *));
+@layer base {
+  :root {
+    /* CSS variables will be injected by ThemeContext */
+    color-scheme: light;
+    --animation-duration: 0.01s;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color var(--animation-duration),
+              border-color var(--animation-duration),
+              color var(--animation-duration),
+              box-shadow var(--animation-duration);
+}
+
+/* Ant Design overrides for better dark mode */
+.dark {
+  --ant-color-text: var(--colorTextBase);
+  --ant-color-bg-container: var(--colorBgContainer);
+  --ant-color-border: var(--colorBorder);
+  /* Add more Ant Design CSS variable overrides as needed */
+}
+body {
+  @apply bg-bg-layout;
+}
+
+body, .bg-bg-layout {
+  @apply bg-[url('/background.png')] bg-[length:200px_200px] bg-[position:0_0];
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #0000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.long-text {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

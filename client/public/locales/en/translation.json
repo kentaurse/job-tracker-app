@@ -1,0 +1,103 @@
+{
+  "search": {
+    "placeholder": "Search..."
+  },
+  "menu": {
+    "profile": "My Profile",
+    "settings": "Account Settings",
+    "help": "Help Center",
+    "logout": "Logout"
+  },
+  "notifications": {
+    "newDeposit": "New deposit request #{{id}}",
+    "withdrawalComplete": "Withdrawal completed #{{id}}"
+  },
+  "footer": {
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "contact": "Contact",
+      "careers": "Careers",
+      "blog": "Blog"
+    },
+    "legal": {
+      "title": "Legal",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "responsible": "Responsible Gaming",
+      "aml": "AML Policy"
+    },
+    "support": {
+      "title": "Support",
+      "help": "Help Center",
+      "faqs": "FAQs",
+      "chat": "Live Chat",
+      "tickets": "Support Tickets"
+    },
+    "description": "Your trusted platform for live baccarat gaming.",
+    "rights": "© {{year}} Live Baccarat System. All rights reserved."
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "email": "Email",
+      "password": "Password",
+      "loginButton": "Log in",
+      "or": "or",
+      "googleButton": "Continue with Google",
+      "noAccount": "Don't have an account?",
+      "registerLink": "Register now",
+      "notifications": {
+        "loggingIn": "Logging in",
+        "pleaseWait": "Please wait while we verify your credentials...",
+        "success": "Login Successful",
+        "welcomeBack": "Welcome back, {{name}}!",
+        "failed": "Login Failed",
+        "googleConnecting": "Connecting to Google..."
+      }
+    },
+    "register": {
+      "title": "Create Account",
+      "username": "Username",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "registerButton": "Register",
+      "or": "or",
+      "googleButton": "Continue with Google",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Login here",
+      "notifications": {
+        "creating": "Creating Account",
+        "verifying": "Please wait while we send verification code...",
+        "codeSent": "Verification Code Sent",
+        "checkEmail": "Please check your email for the verification code.",
+        "failed": "Registration Failed"
+      }
+    },
+    "validation": {
+      "emailRequired": "Please input your email!",
+      "emailValid": "Please enter a valid email!",
+      "passwordRequired": "Please input your password!",
+      "passwordLength": "Password must be at least 8 characters!",
+      "passwordFormat": "Password must contain at least one uppercase letter and one number!",
+      "usernameRequired": "Please input your username!",
+      "usernameLength": "Username must be at least 3 characters!",
+      "confirmRequired": "Please confirm your password!",
+      "passwordsMatch": "The passwords do not match!"
+    }
+  },
+  "lobby": {
+    "favorites": "Favorites",
+    "newDealer": "New Dealer",
+    "new": "New",
+    "enterTable": "Enter Table",
+    "minBet": "Min Bet",
+    "players": "Players"
+  },
+  "landing": {
+    "favorites": "Favorites",
+    "newDealer": "New Dealer",
+    "new": "NEW"
+  }
+} 

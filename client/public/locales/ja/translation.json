@@ -1,0 +1,103 @@
+{
+  "search": {
+    "placeholder": "検索..."
+  },
+  "menu": {
+    "profile": "マイプロフィール",
+    "settings": "アカウント設定",
+    "help": "ヘルプセンター",
+    "logout": "ログアウト"
+  },
+  "notifications": {
+    "newDeposit": "新規入金リクエスト #{{id}}",
+    "withdrawalComplete": "出金完了 #{{id}}"
+  },
+  "footer": {
+    "company": {
+      "title": "会社情報",
+      "about": "会社概要",
+      "contact": "お問い合わせ",
+      "careers": "採用情報",
+      "blog": "ブログ"
+    },
+    "legal": {
+      "title": "法的情報",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "responsible": "責任あるギャンブル",
+      "aml": "マネーロンダリング防止方針"
+    },
+    "support": {
+      "title": "サポート",
+      "help": "ヘルプセンター",
+      "faqs": "よくある質問",
+      "chat": "ライブチャット",
+      "tickets": "サポートチケット"
+    },
+    "description": "ライブバカラゲームの信頼できるプラットフォーム",
+    "rights": "© {{year}} ライブバカラシステム. All rights reserved."
+  },
+  "auth": {
+    "login": {
+      "title": "おかえりなさい",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "loginButton": "ログイン",
+      "or": "または",
+      "googleButton": "Googleで続ける",
+      "noAccount": "アカウントをお持ちでない方は",
+      "registerLink": "新規登録",
+      "notifications": {
+        "loggingIn": "ログイン中",
+        "pleaseWait": "認証中です...",
+        "success": "ログイン成功",
+        "welcomeBack": "おかえりなさい、{{name}}さん！",
+        "failed": "ログイン失敗",
+        "googleConnecting": "Googleに接続中..."
+      }
+    },
+    "register": {
+      "title": "アカウント作成",
+      "username": "ユーザー名",
+      "email": "メールアドレス",
+      "password": "パスワード",
+      "confirmPassword": "パスワード（確認）",
+      "registerButton": "登録",
+      "or": "または",
+      "googleButton": "Googleで続ける",
+      "haveAccount": "すでにアカウントをお持ちの方は",
+      "loginLink": "ログイン",
+      "notifications": {
+        "creating": "アカウント作成中",
+        "verifying": "認証コードを送信中です...",
+        "codeSent": "認証コード送信完了",
+        "checkEmail": "メールをご確認ください",
+        "failed": "登録失敗"
+      }
+    },
+    "validation": {
+      "emailRequired": "メールアドレスを入力してください",
+      "emailValid": "有効なメールアドレスを入力してください",
+      "passwordRequired": "パスワードを入力してください",
+      "passwordLength": "パスワードは8文字以上で入力してください",
+      "passwordFormat": "パスワードは大文字と数字を含める必要があります",
+      "usernameRequired": "ユーザー名を入力してください",
+      "usernameLength": "ユーザー名は3文字以上で入力してください",
+      "confirmRequired": "パスワードを確認してください",
+      "passwordsMatch": "パスワードが一致しません"
+    }
+  },
+  "lobby": {
+    "favorites": "お気に入り",
+    "newDealer": "新規ディーラー",
+    "new": "新登場",
+    "enterTable": "入場する",
+    "minBet": "最小ベット",
+    "players": "プレイヤー"
+  },
+  "landing": {
+    "favorites": "お気に入り",
+    "newDealer": "新着ディーラー",
+    "new": "NEW"
+  }
+} 
